@@ -1,7 +1,11 @@
 MAIN           = main
-SRC            = main.c usb_cdc.c mcp2515.c clock.c
+SRC            = main.c usb_cdc.c mcp2515.c clock.c eeprom.c
 #CC             = /opt/microchip/xc8/v1.20/bin/xc8
-CC             =/opt/microchip/xc8/v1.33/bin/xc8
+#CC             =/opt/microchip/xc8/v1.33/bin/xc8
+CC              ="\Program Files (x86)\Microchip\xc8\v1.35\bin\xc8"
+
+#Windows path, gnu make is very nice
+
 BOOTLOADER     = mphidflash
 
 all: $(MAIN).hex
@@ -13,5 +17,5 @@ flash:
 	$(BOOTLOADER) -write main.hex -reset
 
 clean:
-	rm -f $(MAIN).hex funclist $(MAIN).cof $(MAIN).hxl $(MAIN).p1 $(MAIN).sdb startup.* $(MAIN).lst $(MAIN).pre $(MAIN).sym
+	del -f $(MAIN).hex funclist $(MAIN).cof $(MAIN).hxl $(MAIN).p1 $(MAIN).sdb startup.* $(MAIN).lst $(MAIN).pre $(MAIN).sym
 
