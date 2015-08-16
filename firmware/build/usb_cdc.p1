@@ -1,363 +1,363 @@
 Version 3.2 HI-TECH Software Intermediate Code
 "57 usb_cdc.c
-[s S486 `uc 1 `uc 1 `uc 1 `uc 1 ]
-[n S486 . stat cnt adrl adrh ]
+[s S450 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S450 . stat cnt adrl adrh ]
 "65
-[s S487 `S486 1 `S486 1 ]
-[n S487 . out in ]
+[s S451 `S450 1 `S450 1 ]
+[n S451 . out in ]
 "28 usb_cdc.h
 [v _usb_process `(v ~T0 @X0 0 ef ]
-"47 /opt/microchip/xc8/v1.33/include/pic18f14k50.h
+"49 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic18f14k50.h
 [v _UEP0 `Vuc ~T0 @X0 0 e@3923 ]
-"178
+"180
 [v _UEP1 `Vuc ~T0 @X0 0 e@3924 ]
-"309
+"311
 [v _UEP2 `Vuc ~T0 @X0 0 e@3925 ]
-"440
+"442
 [v _UEP3 `Vuc ~T0 @X0 0 e@3926 ]
-"1421
+"1423
 [v _UCFG `Vuc ~T0 @X0 0 e@3937 ]
-"1588
+"1590
 [v _UCON `Vuc ~T0 @X0 0 e@3940 ]
-"1489
+"1491
 [s S117 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S117 . URSTIF UERRIF ACTVIF TRNIF IDLEIF STALLIF SOFIF ]
-"1488
+"1490
 [u S116 `S117 1 ]
 [n S116 . . ]
-"1499
+"1501
 [v _UIRbits `VS116 ~T0 @X0 0 e@3938 ]
-"1538
+"1540
 [v _USTAT `Vuc ~T0 @X0 0 e@3939 ]
-"1145
+"1147
 [v _UADDR `Vuc ~T0 @X0 0 e@3932 ]
-"1594
+"1596
 [s S121 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S121 . . SUSPND RESUME USBEN PKTDIS SE0 PPBRST ]
-"1593
+"1595
 [u S120 `S121 1 ]
 [n S120 . . ]
-"1604
+"1606
 [v _UCONbits `VS120 ~T0 @X0 0 e@3940 ]
-"49 /opt/microchip/xc8/v1.33/include/pic18f14k50.h
+"51 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic18f14k50.h
 [; <" UEP0 equ 0F53h ;# ">
-"180
+"182
 [; <" UEP1 equ 0F54h ;# ">
-"311
+"313
 [; <" UEP2 equ 0F55h ;# ">
-"442
+"444
 [; <" UEP3 equ 0F56h ;# ">
-"573
+"575
 [; <" UEP4 equ 0F57h ;# ">
-"704
+"706
 [; <" UEP5 equ 0F58h ;# ">
-"835
+"837
 [; <" UEP6 equ 0F59h ;# ">
-"966
+"968
 [; <" UEP7 equ 0F5Ah ;# ">
-"1097
+"1099
 [; <" UEIE equ 0F5Bh ;# ">
-"1147
+"1149
 [; <" UADDR equ 0F5Ch ;# ">
-"1210
+"1212
 [; <" UFRML equ 0F5Dh ;# ">
-"1279
+"1281
 [; <" UFRMH equ 0F5Eh ;# ">
-"1318
+"1320
 [; <" UEIR equ 0F5Fh ;# ">
-"1368
+"1370
 [; <" UIE equ 0F60h ;# ">
-"1423
+"1425
 [; <" UCFG equ 0F61h ;# ">
-"1485
+"1487
 [; <" UIR equ 0F62h ;# ">
-"1540
+"1542
 [; <" USTAT equ 0F63h ;# ">
-"1590
+"1592
 [; <" UCON equ 0F64h ;# ">
-"1640
+"1642
 [; <" SRCON0 equ 0F68h ;# ">
-"1710
+"1712
 [; <" SRCON1 equ 0F69h ;# ">
-"1771
+"1773
 [; <" CM2CON0 equ 0F6Bh ;# ">
-"1840
+"1842
 [; <" CM2CON1 equ 0F6Ch ;# ">
-"1901
+"1903
 [; <" CM1CON0 equ 0F6Dh ;# ">
-"1970
+"1972
 [; <" SSPMSK equ 0F6Fh ;# ">
-"1975
+"1977
 [; <" SSPMASK equ 0F6Fh ;# ">
-"2107
+"2109
 [; <" SLRCON equ 0F76h ;# ">
-"2138
+"2140
 [; <" WPUA equ 0F77h ;# ">
-"2170
+"2172
 [; <" WPUB equ 0F78h ;# ">
-"2208
+"2210
 [; <" IOCA equ 0F79h ;# ">
-"2252
+"2254
 [; <" IOCB equ 0F7Ah ;# ">
-"2290
+"2292
 [; <" ANSEL equ 0F7Eh ;# ">
-"2334
+"2336
 [; <" ANSELH equ 0F7Fh ;# ">
-"2371
+"2373
 [; <" PORTA equ 0F80h ;# ">
-"2507
+"2509
 [; <" PORTB equ 0F81h ;# ">
-"2658
+"2660
 [; <" PORTC equ 0F82h ;# ">
-"2954
+"2956
 [; <" LATA equ 0F89h ;# ">
-"3060
+"3062
 [; <" LATB equ 0F8Ah ;# ">
-"3169
+"3171
 [; <" LATC equ 0F8Bh ;# ">
-"3301
+"3303
 [; <" TRISA equ 0F92h ;# ">
-"3306
+"3308
 [; <" DDRA equ 0F92h ;# ">
-"3382
+"3384
 [; <" TRISB equ 0F93h ;# ">
-"3387
+"3389
 [; <" DDRB equ 0F93h ;# ">
-"3511
+"3513
 [; <" TRISC equ 0F94h ;# ">
-"3516
+"3518
 [; <" DDRC equ 0F94h ;# ">
-"3732
+"3734
 [; <" OSCTUNE equ 0F9Bh ;# ">
-"3801
+"3803
 [; <" PIE1 equ 0F9Dh ;# ">
-"3874
+"3876
 [; <" PIR1 equ 0F9Eh ;# ">
-"3947
+"3949
 [; <" IPR1 equ 0F9Fh ;# ">
-"4020
+"4022
 [; <" PIE2 equ 0FA0h ;# ">
-"4085
+"4087
 [; <" PIR2 equ 0FA1h ;# ">
-"4150
+"4152
 [; <" IPR2 equ 0FA2h ;# ">
-"4215
+"4217
 [; <" EECON1 equ 0FA6h ;# ">
-"4280
+"4282
 [; <" EECON2 equ 0FA7h ;# ">
-"4286
+"4288
 [; <" EEDATA equ 0FA8h ;# ">
-"4292
+"4294
 [; <" EEADR equ 0FA9h ;# ">
-"4353
+"4355
 [; <" RCSTA equ 0FABh ;# ">
-"4358
+"4360
 [; <" RCSTA1 equ 0FABh ;# ">
-"4562
+"4564
 [; <" TXSTA equ 0FACh ;# ">
-"4567
+"4569
 [; <" TXSTA1 equ 0FACh ;# ">
-"4859
+"4861
 [; <" TXREG equ 0FADh ;# ">
-"4864
+"4866
 [; <" TXREG1 equ 0FADh ;# ">
-"4870
+"4872
 [; <" RCREG equ 0FAEh ;# ">
-"4875
+"4877
 [; <" RCREG1 equ 0FAEh ;# ">
-"4881
+"4883
 [; <" SPBRG equ 0FAFh ;# ">
-"4886
+"4888
 [; <" SPBRG1 equ 0FAFh ;# ">
-"4892
+"4894
 [; <" SPBRGH equ 0FB0h ;# ">
-"4898
+"4900
 [; <" T3CON equ 0FB1h ;# ">
-"5006
+"5008
 [; <" TMR3 equ 0FB2h ;# ">
-"5012
+"5014
 [; <" TMR3L equ 0FB2h ;# ">
-"5018
+"5020
 [; <" TMR3H equ 0FB3h ;# ">
-"5024
+"5026
 [; <" ECCP1AS equ 0FB6h ;# ">
-"5105
+"5107
 [; <" PWM1CON equ 0FB7h ;# ">
-"5174
+"5176
 [; <" BAUDCON equ 0FB8h ;# ">
-"5179
+"5181
 [; <" BAUDCTL equ 0FB8h ;# ">
-"5339
+"5341
 [; <" PSTRCON equ 0FB9h ;# ">
-"5382
+"5384
 [; <" REFCON0 equ 0FBAh ;# ">
-"5387
+"5389
 [; <" VREFCON0 equ 0FBAh ;# ">
-"5459
+"5461
 [; <" REFCON1 equ 0FBBh ;# ">
-"5464
+"5466
 [; <" VREFCON1 equ 0FBBh ;# ">
-"5594
+"5596
 [; <" REFCON2 equ 0FBCh ;# ">
-"5599
+"5601
 [; <" VREFCON2 equ 0FBCh ;# ">
-"5679
+"5681
 [; <" CCP1CON equ 0FBDh ;# ">
-"5760
+"5762
 [; <" CCPR1 equ 0FBEh ;# ">
-"5766
+"5768
 [; <" CCPR1L equ 0FBEh ;# ">
-"5772
+"5774
 [; <" CCPR1H equ 0FBFh ;# ">
-"5778
+"5780
 [; <" ADCON2 equ 0FC0h ;# ">
-"5848
+"5850
 [; <" ADCON1 equ 0FC1h ;# ">
-"5894
+"5896
 [; <" ADCON0 equ 0FC2h ;# ">
-"6016
+"6018
 [; <" ADRES equ 0FC3h ;# ">
-"6022
+"6024
 [; <" ADRESL equ 0FC3h ;# ">
-"6028
+"6030
 [; <" ADRESH equ 0FC4h ;# ">
-"6034
+"6036
 [; <" SSPCON2 equ 0FC5h ;# ">
-"6095
+"6097
 [; <" SSPCON1 equ 0FC6h ;# ">
-"6164
+"6166
 [; <" SSPSTAT equ 0FC7h ;# ">
-"6403
+"6405
 [; <" SSPADD equ 0FC8h ;# ">
-"6409
+"6411
 [; <" SSPBUF equ 0FC9h ;# ">
-"6415
+"6417
 [; <" T2CON equ 0FCAh ;# ">
-"6485
+"6487
 [; <" PR2 equ 0FCBh ;# ">
-"6490
+"6492
 [; <" MEMCON equ 0FCBh ;# ">
-"6594
+"6596
 [; <" TMR2 equ 0FCCh ;# ">
-"6600
+"6602
 [; <" T1CON equ 0FCDh ;# ">
-"6704
+"6706
 [; <" TMR1 equ 0FCEh ;# ">
-"6710
+"6712
 [; <" TMR1L equ 0FCEh ;# ">
-"6716
+"6718
 [; <" TMR1H equ 0FCFh ;# ">
-"6722
+"6724
 [; <" RCON equ 0FD0h ;# ">
-"6854
+"6856
 [; <" WDTCON equ 0FD1h ;# ">
-"6881
+"6883
 [; <" OSCCON2 equ 0FD2h ;# ">
-"6912
+"6914
 [; <" OSCCON equ 0FD3h ;# ">
-"6990
+"6992
 [; <" T0CON equ 0FD5h ;# ">
-"7059
+"7061
 [; <" TMR0 equ 0FD6h ;# ">
-"7065
+"7067
 [; <" TMR0L equ 0FD6h ;# ">
-"7071
+"7073
 [; <" TMR0H equ 0FD7h ;# ">
-"7077
+"7079
 [; <" STATUS equ 0FD8h ;# ">
-"7155
+"7157
 [; <" FSR2 equ 0FD9h ;# ">
-"7161
+"7163
 [; <" FSR2L equ 0FD9h ;# ">
-"7167
+"7169
 [; <" FSR2H equ 0FDAh ;# ">
-"7173
+"7175
 [; <" PLUSW2 equ 0FDBh ;# ">
-"7179
+"7181
 [; <" PREINC2 equ 0FDCh ;# ">
-"7185
+"7187
 [; <" POSTDEC2 equ 0FDDh ;# ">
-"7191
+"7193
 [; <" POSTINC2 equ 0FDEh ;# ">
-"7197
+"7199
 [; <" INDF2 equ 0FDFh ;# ">
-"7203
+"7205
 [; <" BSR equ 0FE0h ;# ">
-"7209
+"7211
 [; <" FSR1 equ 0FE1h ;# ">
-"7215
+"7217
 [; <" FSR1L equ 0FE1h ;# ">
-"7221
+"7223
 [; <" FSR1H equ 0FE2h ;# ">
-"7227
+"7229
 [; <" PLUSW1 equ 0FE3h ;# ">
-"7233
+"7235
 [; <" PREINC1 equ 0FE4h ;# ">
-"7239
+"7241
 [; <" POSTDEC1 equ 0FE5h ;# ">
-"7245
+"7247
 [; <" POSTINC1 equ 0FE6h ;# ">
-"7251
+"7253
 [; <" INDF1 equ 0FE7h ;# ">
-"7257
+"7259
 [; <" WREG equ 0FE8h ;# ">
-"7268
+"7270
 [; <" FSR0 equ 0FE9h ;# ">
-"7274
+"7276
 [; <" FSR0L equ 0FE9h ;# ">
-"7280
+"7282
 [; <" FSR0H equ 0FEAh ;# ">
-"7286
+"7288
 [; <" PLUSW0 equ 0FEBh ;# ">
-"7292
+"7294
 [; <" PREINC0 equ 0FECh ;# ">
-"7298
+"7300
 [; <" POSTDEC0 equ 0FEDh ;# ">
-"7304
+"7306
 [; <" POSTINC0 equ 0FEEh ;# ">
-"7310
+"7312
 [; <" INDF0 equ 0FEFh ;# ">
-"7316
+"7318
 [; <" INTCON3 equ 0FF0h ;# ">
-"7407
+"7409
 [; <" INTCON2 equ 0FF1h ;# ">
-"7476
+"7478
 [; <" INTCON equ 0FF2h ;# ">
-"7622
+"7624
 [; <" PROD equ 0FF3h ;# ">
-"7628
+"7630
 [; <" PRODL equ 0FF3h ;# ">
-"7634
+"7636
 [; <" PRODH equ 0FF4h ;# ">
-"7640
+"7642
 [; <" TABLAT equ 0FF5h ;# ">
-"7648
+"7650
 [; <" TBLPTR equ 0FF6h ;# ">
-"7654
+"7656
 [; <" TBLPTRL equ 0FF6h ;# ">
-"7660
+"7662
 [; <" TBLPTRH equ 0FF7h ;# ">
-"7666
+"7668
 [; <" TBLPTRU equ 0FF8h ;# ">
-"7674
+"7676
 [; <" PCLAT equ 0FF9h ;# ">
-"7681
+"7683
 [; <" PC equ 0FF9h ;# ">
-"7687
+"7689
 [; <" PCL equ 0FF9h ;# ">
-"7693
+"7695
 [; <" PCLATH equ 0FFAh ;# ">
-"7699
+"7701
 [; <" PCLATU equ 0FFBh ;# ">
-"7705
+"7707
 [; <" STKPTR equ 0FFCh ;# ">
-"7778
+"7780
 [; <" TOS equ 0FFDh ;# ">
-"7784
+"7786
 [; <" TOSL equ 0FFDh ;# ">
-"7790
+"7792
 [; <" TOSH equ 0FFEh ;# ">
-"7796
+"7798
 [; <" TOSU equ 0FFFh ;# ">
 "77 usb_cdc.c
 [v _usb_dev_desc `Cuc ~T0 @X0 -> 0 `x e ]
@@ -669,7 +669,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 ..
 ]
 "234
-[v _ep `VS487 ~T0 @X0 -> 4 `i e@512 ]
+[v _ep `VS451 ~T0 @X0 -> 4 `i e@512 ]
 "235
 [v _ep0out_buffer `Vuc ~T0 @X0 -> 8 `i e@640 ]
 "236
@@ -735,24 +735,24 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U _usb_sendProcess ]
 [f ]
 "260
-[e $ ! == -> _usb_sendleft `ui -> -> 0 `i `ui 489  ]
-[e $UE 488  ]
-[e :U 489 ]
+[e $ ! == -> _usb_sendleft `ui -> -> 0 `i `ui 453  ]
+[e $UE 452  ]
+[e :U 453 ]
 "262
 [v _length `us ~T0 @X0 1 a ]
 [e = _length _usb_sendleft ]
 "263
-[e $ ! > -> _length `ui -> -> 8 `i `ui 490  ]
+[e $ ! > -> _length `ui -> -> 8 `i `ui 454  ]
 "264
 [e = _length -> -> 8 `i `us ]
-[e :U 490 ]
+[e :U 454 ]
 "266
 [v _i `uc ~T0 @X0 1 a ]
 "267
 {
 [e = _i -> -> 0 `i `uc ]
-[e $U 494  ]
-[e :U 491 ]
+[e $U 458  ]
+[e :U 455 ]
 {
 "268
 [e = *U + &U _ep0in_buffer * -> _i `ux -> -> # *U &U _ep0in_buffer `ui `ux *U _usb_sendbuffer ]
@@ -764,25 +764,25 @@ Version 3.2 HI-TECH Software Intermediate Code
 }
 "267
 [e ++ _i -> -> 1 `i `uc ]
-[e :U 494 ]
-[e $ < -> _i `ui -> _length `ui 491  ]
-[e :U 492 ]
+[e :U 458 ]
+[e $ < -> _i `ui -> _length `ui 455  ]
+[e :U 456 ]
 "271
 }
 "273
 [e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 1 -> _length `uc ]
 "274
-[e $ ! != & -> . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 `i -> 64 `i -> 0 `i 495  ]
+[e $ ! != & -> . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 `i -> 64 `i -> 0 `i 459  ]
 "275
 [e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 136 `i `uc ]
-[e $U 496  ]
+[e $U 460  ]
 "276
-[e :U 495 ]
+[e :U 459 ]
 "277
 [e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 200 `i `uc ]
-[e :U 496 ]
+[e :U 460 ]
 "278
-[e :UE 488 ]
+[e :UE 452 ]
 }
 "288
 [v _usb_loadDescriptor `(uc ~T0 @X0 1 ef3`*Cuc`us`us ]
@@ -793,10 +793,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _length `us ~T0 @X0 1 r3 ]
 [f ]
 "290
-[e $ ! > -> _length `ui -> _size `ui 498  ]
+[e $ ! > -> _length `ui -> _size `ui 462  ]
 "291
 [e = _length _size ]
-[e :U 498 ]
+[e :U 462 ]
 "293
 [e = _usb_sendleft _length ]
 "294
@@ -805,9 +805,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ( _usb_sendProcess ..  ]
 "297
 [e ) -> _length `uc ]
-[e $UE 497  ]
+[e $UE 461  ]
 "298
-[e :UE 497 ]
+[e :UE 461 ]
 }
 "308
 [v _usb_handleDescriptorRequest `(uc ~T0 @X0 1 ef3`uc`uc`us ]
@@ -818,62 +818,62 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _length `us ~T0 @X0 1 r3 ]
 [f ]
 "310
-[e $U 501  ]
+[e $U 465  ]
 {
 "311
-[e :U 502 ]
+[e :U 466 ]
 "312
 [e ) ( _usb_loadDescriptor (3 , , &U _usb_dev_desc -> -> # _usb_dev_desc `ui `us _length ]
-[e $UE 499  ]
+[e $UE 463  ]
 "313
-[e :U 503 ]
+[e :U 467 ]
 "314
 [e ) ( _usb_loadDescriptor (3 , , &U _usb_config_desc -> -> # _usb_config_desc `ui `us _length ]
-[e $UE 499  ]
+[e $UE 463  ]
 "315
-[e :U 504 ]
+[e :U 468 ]
 "316
-[e $U 506  ]
+[e $U 470  ]
 {
 "317
-[e :U 507 ]
+[e :U 471 ]
 [e ) ( _usb_loadDescriptor (3 , , &U _usb_string_0 -> -> # _usb_string_0 `ui `us _length ]
-[e $UE 499  ]
+[e $UE 463  ]
 "318
-[e :U 508 ]
+[e :U 472 ]
 [e ) ( _usb_loadDescriptor (3 , , &U _usb_string_manuf -> -> # _usb_string_manuf `ui `us _length ]
-[e $UE 499  ]
+[e $UE 463  ]
 "319
-[e :U 509 ]
+[e :U 473 ]
 [e ) ( _usb_loadDescriptor (3 , , &U _usb_string_product -> -> # _usb_string_product `ui `us _length ]
-[e $UE 499  ]
+[e $UE 463  ]
 "320
 }
-[e $U 505  ]
+[e $U 469  ]
 "316
-[e :U 506 ]
-[e [\ _index , $ -> -> 0 `i `uc 507
- , $ -> -> 1 `i `uc 508
- , $ -> -> 2 `i `uc 509
- 505 ]
+[e :U 470 ]
+[e [\ _index , $ -> -> 0 `i `uc 471
+ , $ -> -> 1 `i `uc 472
+ , $ -> -> 2 `i `uc 473
+ 469 ]
 "320
-[e :U 505 ]
+[e :U 469 ]
 "321
 }
-[e $U 500  ]
+[e $U 464  ]
 "310
-[e :U 501 ]
-[e [\ _type , $ -> -> 1 `i `uc 502
- , $ -> -> 2 `i `uc 503
- , $ -> -> 3 `i `uc 504
- 500 ]
+[e :U 465 ]
+[e [\ _type , $ -> -> 1 `i `uc 466
+ , $ -> -> 2 `i `uc 467
+ , $ -> -> 3 `i `uc 468
+ 464 ]
 "321
-[e :U 500 ]
+[e :U 464 ]
 "323
 [e ) -> -> 0 `i `uc ]
-[e $UE 499  ]
+[e $UE 463  ]
 "324
-[e :UE 499 ]
+[e :UE 463 ]
 }
 "331
 [v _usb_putch `(v ~T0 @X0 1 ef1`uc ]
@@ -882,27 +882,27 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _ch `uc ~T0 @X0 1 r1 ]
 [f ]
 "333
-[e $ ! == -> _txbuffer_bytesleft `i -> 128 `i 511  ]
+[e $ ! == -> _txbuffer_bytesleft `i -> 128 `i 475  ]
 {
 "335
-[e $UE 510  ]
+[e $UE 474  ]
 "336
 }
-[e :U 511 ]
+[e :U 475 ]
 "338
 [e = *U + &U _txbuffer * -> _txbuffer_writepos `ux -> -> # *U &U _txbuffer `ui `ux _ch ]
 "339
 [e ++ _txbuffer_writepos -> -> 1 `i `uc ]
 "340
-[e $ ! == -> _txbuffer_writepos `i -> 128 `i 512  ]
+[e $ ! == -> _txbuffer_writepos `i -> 128 `i 476  ]
 [e = _txbuffer_writepos -> -> 0 `i `uc ]
-[e :U 512 ]
+[e :U 476 ]
 "341
 [e ++ _txbuffer_bytesleft -> -> 1 `i `uc ]
 "344
 [e ( _usb_process ..  ]
 "345
-[e :UE 510 ]
+[e :UE 474 ]
 }
 "352
 [v _usb_putstr `(v ~T0 @X0 1 ef1`*uc ]
@@ -911,8 +911,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _s `*uc ~T0 @X0 1 r1 ]
 [f ]
 "353
-[e $U 514  ]
-[e :U 515 ]
+[e $U 478  ]
+[e :U 479 ]
 {
 "354
 [e ( _usb_putch (1 *U _s ]
@@ -920,12 +920,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ++ _s * -> -> 1 `i `x -> -> # *U _s `i `x ]
 "356
 }
-[e :U 514 ]
+[e :U 478 ]
 "353
-[e $ != -> *U _s `i -> -> -> 0 `i `uc `i 515  ]
-[e :U 516 ]
+[e $ != -> *U _s `i -> -> -> 0 `i `uc `i 479  ]
+[e :U 480 ]
 "357
-[e :UE 513 ]
+[e :UE 477 ]
 }
 "362
 [v _usb_txprocess `(v ~T0 @X0 1 ef ]
@@ -933,24 +933,24 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U _usb_txprocess ]
 [f ]
 "363
-[e $ ! == -> _txbuffer_bytesleft `i -> 0 `i 518  ]
-[e $UE 517  ]
-[e :U 518 ]
+[e $ ! == -> _txbuffer_bytesleft `i -> 0 `i 482  ]
+[e $UE 481  ]
+[e :U 482 ]
 "364
-[e $ ! ! != _configured -> -> 0 `i `ui 519  ]
-[e $UE 517  ]
-[e :U 519 ]
+[e $ ! ! != _configured -> -> 0 `i `ui 483  ]
+[e $UE 481  ]
+[e :U 483 ]
 "365
-[e $ ! != & -> . . *U + &U _ep * -> -> -> 1 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 `i -> 128 `i -> 0 `i 520  ]
-[e $UE 517  ]
-[e :U 520 ]
+[e $ ! != & -> . . *U + &U _ep * -> -> -> 1 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 `i -> 128 `i -> 0 `i 484  ]
+[e $UE 481  ]
+[e :U 484 ]
 "367
 [v _count `uc ~T0 @X0 1 a ]
 [e = _count _txbuffer_bytesleft ]
 "368
-[e $ ! > -> _count `i - -> 64 `i -> 1 `i 521  ]
+[e $ ! > -> _count `i - -> 64 `i -> 1 `i 485  ]
 [e = _count -> - -> 64 `i -> 1 `i `uc ]
-[e :U 521 ]
+[e :U 485 ]
 "370
 [v _readpos `uc ~T0 @X0 1 a ]
 [e = _readpos -> % - + -> 128 `i -> _txbuffer_writepos `i -> _txbuffer_bytesleft `i -> 128 `i `uc ]
@@ -959,24 +959,24 @@ Version 3.2 HI-TECH Software Intermediate Code
 "373
 {
 [e = _i -> -> 0 `i `uc ]
-[e $U 525  ]
-[e :U 522 ]
+[e $U 489  ]
+[e :U 486 ]
 {
 "374
 [e = *U + &U _ep1in_buffer * -> _i `ux -> -> # *U &U _ep1in_buffer `ui `ux *U + &U _txbuffer * -> _readpos `ux -> -> # *U &U _txbuffer `ui `ux ]
 "375
 [e ++ _readpos -> -> 1 `i `uc ]
 "376
-[e $ ! == -> _readpos `i -> 128 `i 526  ]
+[e $ ! == -> _readpos `i -> 128 `i 490  ]
 [e = _readpos -> -> 0 `i `uc ]
-[e :U 526 ]
+[e :U 490 ]
 "377
 }
 "373
 [e ++ _i -> -> 1 `i `uc ]
-[e :U 525 ]
-[e $ < -> _i `i -> _count `i 522  ]
-[e :U 523 ]
+[e :U 489 ]
+[e $ < -> _i `i -> _count `i 486  ]
+[e :U 487 ]
 "377
 }
 "379
@@ -984,17 +984,17 @@ Version 3.2 HI-TECH Software Intermediate Code
 "380
 [e =- _txbuffer_bytesleft _count ]
 "382
-[e $ ! != & -> . . *U + &U _ep * -> -> -> 1 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 `i -> 64 `i -> 0 `i 527  ]
+[e $ ! != & -> . . *U + &U _ep * -> -> -> 1 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 `i -> 64 `i -> 0 `i 491  ]
 "383
 [e = . . *U + &U _ep * -> -> -> 1 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 136 `i `uc ]
-[e $U 528  ]
+[e $U 492  ]
 "384
-[e :U 527 ]
+[e :U 491 ]
 "385
 [e = . . *U + &U _ep * -> -> -> 1 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 200 `i `uc ]
-[e :U 528 ]
+[e :U 492 ]
 "386
-[e :UE 517 ]
+[e :UE 481 ]
 }
 "394
 [v _usb_chReceived `(uc ~T0 @X0 1 ef ]
@@ -1003,9 +1003,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [f ]
 "395
 [e ) -> -> == & -> . . *U + &U _ep * -> -> -> 3 `i `ui `ux -> -> # *U &U _ep `ui `ux 0 0 `i -> 128 `i -> 0 `i `i `uc ]
-[e $UE 529  ]
+[e $UE 493  ]
 "396
-[e :UE 529 ]
+[e :UE 493 ]
 }
 "403
 [v _usb_getch `(uc ~T0 @X0 1 ef ]
@@ -1013,21 +1013,21 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U _usb_getch ]
 [f ]
 "404
-[e $U 531  ]
-[e :U 532 ]
+[e $U 495  ]
+[e :U 496 ]
 {
 }
-[e :U 531 ]
-[v F4611 `(uc ~T0 @X0 1 tf ]
-[e $ ! != &U _usb_chReceived -> -> 0 `i `*F4611 532  ]
-[e :U 533 ]
+[e :U 495 ]
+[v F3810 `(uc ~T0 @X0 1 tf ]
+[e $ ! != &U _usb_chReceived -> -> 0 `i `*F3810 496  ]
+[e :U 497 ]
 "406
 [v _ch `uc ~T0 @X0 1 a ]
 [e = _ch *U + &U _ep3out_buffer * -> _usb_getchpos `ux -> -> # *U &U _ep3out_buffer `ui `ux ]
 "407
 [e ++ _usb_getchpos -> -> 1 `i `uc ]
 "408
-[e $ ! == -> _usb_getchpos `i -> . . *U + &U _ep * -> -> -> 3 `i `ui `ux -> -> # *U &U _ep `ui `ux 0 1 `i 534  ]
+[e $ ! == -> _usb_getchpos `i -> . . *U + &U _ep * -> -> -> 3 `i `ui `ux -> -> # *U &U _ep `ui `ux 0 1 `i 498  ]
 {
 "409
 [e = . . *U + &U _ep * -> -> -> 3 `i `ui `ux -> -> # *U &U _ep `ui `ux 0 1 -> -> 8 `i `uc ]
@@ -1037,12 +1037,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _usb_getchpos -> -> 0 `i `uc ]
 "412
 }
-[e :U 534 ]
+[e :U 498 ]
 "413
 [e ) _ch ]
-[e $UE 530  ]
+[e $UE 494  ]
 "414
-[e :UE 530 ]
+[e :UE 494 ]
 }
 "419
 [v _usb_init `(v ~T0 @X0 1 ef ]
@@ -1102,7 +1102,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "451
 [e = _UCON -> -> 8 `i `uc ]
 "452
-[e :UE 535 ]
+[e :UE 499 ]
 }
 "458
 [v _usb_process `(v ~T0 @X0 1 ef ]
@@ -1112,28 +1112,28 @@ Version 3.2 HI-TECH Software Intermediate Code
 "460
 [e ( _usb_txprocess ..  ]
 "462
-[e $ ! != -> . . _UIRbits 0 3 `i -> -> -> 0 `i `Vuc `i 537  ]
+[e $ ! != -> . . _UIRbits 0 3 `i -> -> -> 0 `i `Vuc `i 501  ]
 {
 "465
-[e $ ! == -> _USTAT `i -> 0 `i 538  ]
+[e $ ! == -> _USTAT `i -> 0 `i 502  ]
 {
 "469
-[e $ ! == & >> -> . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 0 0 `i -> 2 `i -> 15 `i -> 13 `i 539  ]
+[e $ ! == & >> -> . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 0 0 `i -> 2 `i -> 15 `i -> 13 `i 503  ]
 {
 "472
 [e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 0 `i `uc ]
 "473
 [e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 0 `i `uc ]
 "475
-[e $ ! == & -> *U + &U _ep0out_buffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep0out_buffer `ui `ux `i -> 96 `i << -> 0 `i -> 5 `i 540  ]
+[e $ ! == & -> *U + &U _ep0out_buffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep0out_buffer `ui `ux `i -> 96 `i << -> 0 `i -> 5 `i 504  ]
 {
 "477
-[e $U 542  ]
+[e $U 506  ]
 {
 "478
-[e :U 543 ]
+[e :U 507 ]
 "479
-[e $ ! ! != -> ( _usb_handleDescriptorRequest (3 , , *U + &U _ep0out_buffer * -> -> -> 3 `i `ui `ux -> -> # *U &U _ep0out_buffer `ui `ux *U + &U _ep0out_buffer * -> -> -> 2 `i `ui `ux -> -> # *U &U _ep0out_buffer `ui `ux -> | << -> *U + &U _ep0out_buffer * -> -> -> 7 `i `ui `ux -> -> # *U &U _ep0out_buffer `ui `ux `i -> 8 `i -> *U + &U _ep0out_buffer * -> -> -> 6 `i `ui `ux -> -> # *U &U _ep0out_buffer `ui `ux `i `us `i -> -> -> 0 `i `uc `i 544  ]
+[e $ ! ! != -> ( _usb_handleDescriptorRequest (3 , , *U + &U _ep0out_buffer * -> -> -> 3 `i `ui `ux -> -> # *U &U _ep0out_buffer `ui `ux *U + &U _ep0out_buffer * -> -> -> 2 `i `ui `ux -> -> # *U &U _ep0out_buffer `ui `ux -> | << -> *U + &U _ep0out_buffer * -> -> -> 7 `i `ui `ux -> -> # *U &U _ep0out_buffer `ui `ux `i -> 8 `i -> *U + &U _ep0out_buffer * -> -> -> 6 `i `ui `ux -> -> # *U &U _ep0out_buffer `ui `ux `i `us `i -> -> -> 0 `i `uc `i 508  ]
 {
 "480
 [e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 1 -> -> 0 `i `uc ]
@@ -1141,11 +1141,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 204 `i `uc ]
 "482
 }
-[e :U 544 ]
+[e :U 508 ]
 "483
-[e $U 541  ]
+[e $U 505  ]
 "484
-[e :U 545 ]
+[e :U 509 ]
 "486
 [e = _usb_setaddress *U + &U _ep0out_buffer * -> -> -> 2 `i `ui `ux -> -> # *U &U _ep0out_buffer `ui `ux ]
 "488
@@ -1153,9 +1153,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "489
 [e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 200 `i `uc ]
 "491
-[e $U 541  ]
+[e $U 505  ]
 "492
-[e :U 546 ]
+[e :U 510 ]
 "494
 [e = _usb_config *U + &U _ep0out_buffer * -> -> -> 2 `i `ui `ux -> -> # *U &U _ep0out_buffer `ui `ux ]
 "495
@@ -1165,9 +1165,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "497
 [e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 200 `i `uc ]
 "498
-[e $U 541  ]
+[e $U 505  ]
 "500
-[e :U 547 ]
+[e :U 511 ]
 "502
 [e = *U + &U _ep0in_buffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep0in_buffer `ui `ux _usb_config ]
 "503
@@ -1175,9 +1175,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "504
 [e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 200 `i `uc ]
 "505
-[e $U 541  ]
+[e $U 505  ]
 "507
-[e :U 548 ]
+[e :U 512 ]
 "509
 [e = *U + &U _ep0in_buffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep0in_buffer `ui `ux -> -> 0 `i `uc ]
 "510
@@ -1185,11 +1185,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 "511
 [e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 200 `i `uc ]
 "512
-[e $U 541  ]
+[e $U 505  ]
 "514
-[e :U 549 ]
+[e :U 513 ]
 "515
-[e :U 550 ]
+[e :U 514 ]
 "516
 [e = *U + &U _ep0in_buffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep0in_buffer `ui `ux -> -> 0 `i `uc ]
 "517
@@ -1199,70 +1199,70 @@ Version 3.2 HI-TECH Software Intermediate Code
 "519
 [e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 200 `i `uc ]
 "520
-[e $U 541  ]
+[e $U 505  ]
 "522
-[e :U 551 ]
+[e :U 515 ]
 "523
-[e :U 552 ]
+[e :U 516 ]
 "524
-[e :U 553 ]
+[e :U 517 ]
 "525
 [e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 1 -> -> 0 `i `uc ]
 "526
 [e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 200 `i `uc ]
 "527
-[e $U 541  ]
+[e $U 505  ]
 "528
-[e :U 554 ]
+[e :U 518 ]
 "529
 [e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 1 -> -> 0 `i `uc ]
 "530
 [e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 204 `i `uc ]
 "531
-[e $U 541  ]
+[e $U 505  ]
 "533
 }
-[e $U 541  ]
+[e $U 505  ]
 "477
-[e :U 542 ]
-[e [\ *U + &U _ep0out_buffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _ep0out_buffer `ui `ux , $ -> -> 6 `i `uc 543
- , $ -> -> 5 `i `uc 545
- , $ -> -> 9 `i `uc 546
- , $ -> -> 8 `i `uc 547
- , $ -> -> 10 `i `uc 548
- , $ -> -> 18 `i `uc 549
- , $ -> -> 0 `i `uc 550
- , $ -> -> 17 `i `uc 551
- , $ -> -> 1 `i `uc 552
- , $ -> -> 3 `i `uc 553
- 554 ]
+[e :U 506 ]
+[e [\ *U + &U _ep0out_buffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _ep0out_buffer `ui `ux , $ -> -> 6 `i `uc 507
+ , $ -> -> 5 `i `uc 509
+ , $ -> -> 9 `i `uc 510
+ , $ -> -> 8 `i `uc 511
+ , $ -> -> 10 `i `uc 512
+ , $ -> -> 18 `i `uc 513
+ , $ -> -> 0 `i `uc 514
+ , $ -> -> 17 `i `uc 515
+ , $ -> -> 1 `i `uc 516
+ , $ -> -> 3 `i `uc 517
+ 518 ]
 "533
-[e :U 541 ]
+[e :U 505 ]
 "534
 }
-[e $U 555  ]
-[e :U 540 ]
-[e $ ! == & -> *U + &U _ep0out_buffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep0out_buffer `ui `ux `i -> 96 `i << -> 1 `i -> 5 `i 556  ]
+[e $U 519  ]
+[e :U 504 ]
+[e $ ! == & -> *U + &U _ep0out_buffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep0out_buffer `ui `ux `i -> 96 `i << -> 1 `i -> 5 `i 520  ]
 {
 "535
-[e $U 558  ]
+[e $U 522  ]
 {
 "537
-[e :U 559 ]
+[e :U 523 ]
 "538
 {
 [v _i `uc ~T0 @X0 1 a ]
 {
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 8 `i 560  ]
-[e $U 561  ]
-[e :U 560 ]
+[e $ < -> _i `i -> 8 `i 524  ]
+[e $U 525  ]
+[e :U 524 ]
 {
 [e = *U + &U _ep0in_buffer * -> _i `ux -> -> # *U &U _ep0in_buffer `ui `ux -> -> 0 `i `uc ]
 }
 [e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 8 `i 560  ]
-[e :U 561 ]
+[e $ < -> _i `i -> 8 `i 524  ]
+[e :U 525 ]
 }
 }
 "539
@@ -1270,9 +1270,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "540
 [e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 200 `i `uc ]
 "541
-[e $U 557  ]
+[e $U 521  ]
 "543
-[e :U 563 ]
+[e :U 527 ]
 "544
 [e = _dolinecoding -> -> 1 `i `uc ]
 "545
@@ -1280,9 +1280,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "546
 [e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 200 `i `uc ]
 "547
-[e $U 557  ]
+[e $U 521  ]
 "549
-[e :U 564 ]
+[e :U 528 ]
 "550
 {
 "551
@@ -1290,9 +1290,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "552
 {
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `ui -> # _linecoding `ui 565  ]
-[e $U 566  ]
-[e :U 565 ]
+[e $ < -> _i `ui -> # _linecoding `ui 529  ]
+[e $U 530  ]
+[e :U 529 ]
 {
 "553
 [e = *U + &U _ep0in_buffer * -> _i `ux -> -> # *U &U _ep0in_buffer `ui `ux *U + &U _linecoding * -> _i `ux -> -> # *U &U _linecoding `ui `ux ]
@@ -1300,8 +1300,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 }
 "552
 [e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `ui -> # _linecoding `ui 565  ]
-[e :U 566 ]
+[e $ < -> _i `ui -> # _linecoding `ui 529  ]
+[e :U 530 ]
 "554
 }
 "555
@@ -1311,58 +1311,58 @@ Version 3.2 HI-TECH Software Intermediate Code
 "557
 [e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 200 `i `uc ]
 "558
-[e $U 557  ]
+[e $U 521  ]
 "560
-[e :U 568 ]
+[e :U 532 ]
 "561
-[e :U 569 ]
+[e :U 533 ]
 "562
 [e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 1 -> -> 0 `i `uc ]
 "563
 [e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 200 `i `uc ]
 "564
-[e $U 557  ]
+[e $U 521  ]
 "565
-[e :U 570 ]
+[e :U 534 ]
 "566
 [e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 1 -> -> 0 `i `uc ]
 "567
 [e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 1 0 -> -> 204 `i `uc ]
 "568
-[e $U 557  ]
+[e $U 521  ]
 "569
 }
-[e $U 557  ]
+[e $U 521  ]
 "535
-[e :U 558 ]
-[e [\ *U + &U _ep0out_buffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _ep0out_buffer `ui `ux , $ -> -> 1 `i `uc 559
- , $ -> -> 32 `i `uc 563
- , $ -> -> 33 `i `uc 564
- , $ -> -> 34 `i `uc 568
- , $ -> -> 0 `i `uc 569
- 570 ]
+[e :U 522 ]
+[e [\ *U + &U _ep0out_buffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _ep0out_buffer `ui `ux , $ -> -> 1 `i `uc 523
+ , $ -> -> 32 `i `uc 527
+ , $ -> -> 33 `i `uc 528
+ , $ -> -> 34 `i `uc 532
+ , $ -> -> 0 `i `uc 533
+ 534 ]
 "569
-[e :U 557 ]
+[e :U 521 ]
 "570
 }
-[e :U 556 ]
+[e :U 520 ]
 "573
-[e :U 555 ]
+[e :U 519 ]
 }
-[e $U 571  ]
-[e :U 539 ]
+[e $U 535  ]
+[e :U 503 ]
 {
 "576
-[e $ ! != -> _dolinecoding `i -> -> -> 0 `i `uc `i 572  ]
+[e $ ! != -> _dolinecoding `i -> -> -> 0 `i `uc `i 536  ]
 {
 "577
 [v _i `uc ~T0 @X0 1 a ]
 "578
 {
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `ui -> # _linecoding `ui 573  ]
-[e $U 574  ]
-[e :U 573 ]
+[e $ < -> _i `ui -> # _linecoding `ui 537  ]
+[e $U 538  ]
+[e :U 537 ]
 {
 "579
 [e = *U + &U _linecoding * -> _i `ux -> -> # *U &U _linecoding `ui `ux *U + &U _ep0out_buffer * -> _i `ux -> -> # *U &U _ep0out_buffer `ui `ux ]
@@ -1370,30 +1370,30 @@ Version 3.2 HI-TECH Software Intermediate Code
 }
 "578
 [e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `ui -> # _linecoding `ui 573  ]
-[e :U 574 ]
+[e $ < -> _i `ui -> # _linecoding `ui 537  ]
+[e :U 538 ]
 "580
 }
 "581
 [e = _dolinecoding -> -> 0 `i `uc ]
 "582
 }
-[e :U 572 ]
+[e :U 536 ]
 "583
 }
-[e :U 571 ]
+[e :U 535 ]
 "585
 [e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 0 1 -> -> 8 `i `uc ]
 "586
 [e = . . *U + &U _ep * -> -> -> 0 `i `ui `ux -> -> # *U &U _ep `ui `ux 0 0 -> -> 128 `i `uc ]
 "588
 }
-[e $U 576  ]
-[e :U 538 ]
-[e $ ! == -> _USTAT `i -> 4 `i 577  ]
+[e $U 540  ]
+[e :U 502 ]
+[e $ ! == -> _USTAT `i -> 4 `i 541  ]
 {
 "591
-[e $ ! > -> _usb_setaddress `i -> 0 `i 578  ]
+[e $ ! > -> _usb_setaddress `i -> 0 `i 542  ]
 {
 "592
 [e = _UADDR _usb_setaddress ]
@@ -1401,20 +1401,20 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e = _usb_setaddress -> -> 0 `i `uc ]
 "594
 }
-[e :U 578 ]
+[e :U 542 ]
 "596
 [e ( _usb_sendProcess ..  ]
 "598
 }
-[e :U 577 ]
+[e :U 541 ]
 "600
-[e :U 576 ]
+[e :U 540 ]
 [e = . . _UCONbits 0 4 -> -> 0 `i `uc ]
 "601
 [e = . . _UIRbits 0 3 -> -> 0 `i `uc ]
 "602
 }
-[e :U 537 ]
+[e :U 501 ]
 "603
-[e :UE 536 ]
+[e :UE 500 ]
 }

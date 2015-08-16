@@ -1,1 +1,1 @@
- main.d  main.p1:  main.c usb_cdc.h mcp2515.h clock.h
+ main.d  main.p1:  main.c usb_cdc.h mcp2515.h clock.h eeprom.h

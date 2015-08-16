@@ -1,10 +1,14 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"27 clock.h
-[v _clock_reset `(v ~T0 @X0 0 ef ]
-"6990 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic18f14k50.h
-[v _T0CON `Vuc ~T0 @X0 0 e@4053 ]
-"7059
-[v _TMR0 `Vus ~T0 @X0 0 e@4054 ]
+"4292 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic18f14k50.h
+[v _EEADR `Vuc ~T0 @X0 0 e@4009 ]
+"4215
+[v _EECON1 `Vuc ~T0 @X0 0 e@4006 ]
+"4286
+[v _EEDATA `Vuc ~T0 @X0 0 e@4008 ]
+"7476
+[v _INTCON `Vuc ~T0 @X0 0 e@4082 ]
+"4280
+[v _EECON2 `Vuc ~T0 @X0 0 e@4007 ]
 "51 C:\Program Files (x86)\Microchip\xc8\v1.35\include\pic18f14k50.h
 [; <" UEP0 equ 0F53h ;# ">
 "182
@@ -325,66 +329,83 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; <" TOSH equ 0FFEh ;# ">
 "7798
 [; <" TOSU equ 0FFFh ;# ">
-"24 clock.c
-[v _clock_lastclock `us ~T0 @X0 1 e ]
-"25
-[v _clock_msticker `us ~T0 @X0 1 e ]
-"30
-[v _clock_init `(v ~T0 @X0 1 ef ]
+"26 eeprom.c
+[v _readEEROM `(uc ~T0 @X0 1 ef1`uc ]
+"27
 {
-[e :U _clock_init ]
+[e :U _readEEROM ]
+"26
+[v _addr `uc ~T0 @X0 1 r1 ]
+"27
 [f ]
+"28
+[v _data `uc ~T0 @X0 1 a ]
+"29
+[e = _EEADR _addr ]
+"30
+[e = _EECON1 -> -> 0 `i `uc ]
+"31
+[e = _EECON1 -> -> 1 `i `uc ]
 "32
-[e ( _clock_reset ..  ]
-"35
-[e = _T0CON -> -> 132 `i `uc ]
-"36
+[e = _data _EEDATA ]
+"33
+[e ) _data ]
+[e $UE 450  ]
+"34
 [e :UE 450 ]
 }
-"41
-[v _clock_process `(v ~T0 @X0 1 ef ]
+"36
+[v _writeEEROM `(v ~T0 @X0 1 ef2`uc`uc ]
+"37
 {
-[e :U _clock_process ]
+[e :U _writeEEROM ]
+"36
+[v _addr `uc ~T0 @X0 1 r1 ]
+[v _data `uc ~T0 @X0 1 r2 ]
+"37
 [f ]
+"38
+[e = _EEADR _addr ]
+"39
+[e = _EEDATA _data ]
+"41
+[e = _EECON1 -> -> 4 `i `uc ]
 "42
-[e $ ! > -> -> - -> _TMR0 `ui -> _clock_lastclock `ui `us `ui -> -> 375 `i `ui 452  ]
-{
+[e = _INTCON -> & -> _INTCON `i -> 127 `i `uc ]
 "43
-[e =+ _clock_lastclock -> -> 375 `i `us ]
+[e = _EECON2 -> -> 85 `i `uc ]
 "44
-[e ++ _clock_msticker -> -> 1 `i `us ]
+[e = _EECON2 -> -> 170 `i `uc ]
 "45
-[e $ ! > -> _clock_msticker `l -> 60000 `l 453  ]
-[e = _clock_msticker -> -> 0 `i `us ]
-[e :U 453 ]
+[e = _EECON1 -> -> 2 `i `uc ]
 "46
-}
-[e :U 452 ]
+[e = _INTCON -> | -> _INTCON `i -> 127 `i `uc ]
 "47
 [e :UE 451 ]
 }
-"54
-[v _clock_getMS `(us ~T0 @X0 1 ef ]
+"50
+[v _setUniqueID `(v ~T0 @X0 1 ef1`uc ]
+"51
 {
-[e :U _clock_getMS ]
+[e :U _setUniqueID ]
+"50
+[v _ID `uc ~T0 @X0 1 r1 ]
+"51
 [f ]
-"55
-[e ) _clock_msticker ]
-[e $UE 454  ]
-"56
-[e :UE 454 ]
+"52
+[e ( _writeEEROM (2 , -> -> 0 `i `uc _ID ]
+"53
+[e :UE 452 ]
 }
-"61
-[v _clock_reset `(v ~T0 @X0 1 ef ]
+"55
+[v _getUniqueID `(uc ~T0 @X0 1 ef ]
+"56
 {
-[e :U _clock_reset ]
+[e :U _getUniqueID ]
 [f ]
-"62
-[e = _TMR0 -> -> 0 `i `us ]
-"63
-[e = _clock_lastclock -> -> 0 `i `us ]
-"64
-[e = _clock_msticker -> -> 0 `i `us ]
-"65
-[e :UE 455 ]
+"57
+[e ) ( _readEEROM (1 -> -> 0 `i `uc ]
+[e $UE 453  ]
+"58
+[e :UE 453 ]
 }

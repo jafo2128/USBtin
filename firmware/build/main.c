@@ -9,6 +9,7 @@
 
  Authors and Copyright:
  (c) 2012-2014, Thomas Fischl <tfischl@gmx.de>
+ John Broadbent <john.broadbent.ky@gmail.com>
 
  Device: PIC18F14K50
  Compiler: Microchip MPLAB XC8 C Compiler V1.20
@@ -47,6 +48,7 @@
 #include "usb_cdc.h"
 #include "clock.h"
 #include "mcp2515.h"
+#include "eeprom.h"
 
 #define hardware_setLED(value) LATBbits.LATB5 = value
 #define hardware_getBLSwitch() !PORTAbits.RA3
@@ -344,6 +346,20 @@ void parseLine(char * line) {
                 }
             } 
             break;
+		case 'Q':
+		{
+			unsigned char id = line[1];
+			setUniqueID(id);
+            result = CR;
+			break;
+		}
+		case 'q':
+		{
+			unsigned char id = getUniqueID();
+			sendByteHex(id);
+            result = CR;
+			break;
+		}
          
     }
 

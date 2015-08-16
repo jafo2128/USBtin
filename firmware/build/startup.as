@@ -1,14 +1,14 @@
 
-	; Microchip MPLAB XC8 C Compiler V1.33
-	; Copyright (C) 1984-2014 HI-TECH Software
+	; Microchip MPLAB XC8 C Compiler V1.35
+	; Copyright (C) 1984-2015 HI-TECH Software
 
 	; Auto-generated runtime startup code for final link stage.
 
 	;
 	; Compiler options:
 	;
-	; main.c usb_cdc.c mcp2515.c clock.c --chip=18F14K50 --CODEOFFSET=1000h \
-	; --ROM=default,-0-fff --MODE=free
+	; main.c usb_cdc.c mcp2515.c clock.c eeprom.c --chip=18F14K50 \
+	; --CODEOFFSET=1000h --ROM=default,-0-fff --MODE=free
 	;
 
 
@@ -108,8 +108,8 @@ start:
 
 ;Initialize the stack pointer (FSR1)
 	global stacklo, stackhi
-	stacklo	equ	0A0h
-	stackhi	equ	0FFh
+	stacklo	equ	0220h
+	stackhi	equ	027Fh
 
 
 	psect	stack,class=STACK,space=2,noexec

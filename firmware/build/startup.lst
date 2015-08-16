@@ -1,20 +1,20 @@
 
 
-Microchip Technology PIC18 Macro Assembler V1.33 build 59893 
-                                                                                                           Tue Apr  7 21:38:46 2015
+Microchip Technology PIC18 Macro Assembler V1.35 build -356382666 
+                                                                                                           Sun Aug 16 14:19:00 2015
 
 
      1                           
-     2                           	; Microchip MPLAB XC8 C Compiler V1.33
-     3                           	; Copyright (C) 1984-2014 HI-TECH Software
+     2                           	; Microchip MPLAB XC8 C Compiler V1.35
+     3                           	; Copyright (C) 1984-2015 HI-TECH Software
      4                           
      5                           	; Auto-generated runtime startup code for final link stage.
      6                           
      7                           	;
      8                           	; Compiler options:
      9                           	;
-    10                           	; main.c usb_cdc.c mcp2515.c clock.c --chip=18F14K50 --CODEOFFSET=1000h \
-    11                           	; --ROM=default,-0-fff --MODE=free
+    10                           	; main.c usb_cdc.c mcp2515.c clock.c eeprom.c --chip=18F14K50 \
+    11                           	; --CODEOFFSET=1000h --ROM=default,-0-fff --MODE=free
     12                           	;
     13                           
     14                           
@@ -113,8 +113,8 @@ Microchip Technology PIC18 Macro Assembler V1.33 build 59893
    107  001000                     
    108                           ;Initialize the stack pointer (FSR1)
    109                           	global stacklo, stackhi
-   110                           	stacklo	equ	0A0h
-   111  0000                     	stackhi	equ	0FFh
+   110                           	stacklo	equ	0220h
+   111  0000                     	stackhi	equ	027Fh
    112  0000                     
    113                           
    114                           	psect	stack,class=STACK,space=2,noexec
@@ -126,14 +126,14 @@ Microchip Technology PIC18 Macro Assembler V1.33 build 59893
    120                           	psect	end_init
    121                           	global start_initialization
    122                           	goto start_initialization	;jump to C runtime clear & initialization
-   123  001000  EFFC  F014         
+   123  001000  EF17  F015         
 
 
-Microchip Technology PIC18 Macro Assembler V1.33 build 59893 
-Symbol Table                                                                                               Tue Apr  7 21:38:46 2015
+Microchip Technology PIC18 Macro Assembler V1.35 build -356382666 
+Symbol Table                                                                                               Sun Aug 16 14:19:00 2015
 
-                __S1 01FA                 ___sp 0000                 _main 3200                 start 1000  
-              __HRAM 0000                __LRAM 0001         __mediumconst 0000               stackhi 0000FF  
-             stacklo 0000A0           __accesstop 000060           ___inthi_sp 0000           ___intlo_sp 0000  
-            __ramtop 0300  start_initialization 29F8          __smallconst 1004             intlevel0 0000  
+                __S1 01FA                 ___sp 0000                 _main 3232                 start 1000  
+              __HRAM 0000                __LRAM 0001         __mediumconst 0000               stackhi 00027F  
+             stacklo 000220           __accesstop 000060           ___inthi_sp 0000           ___intlo_sp 0000  
+            __ramtop 0300  start_initialization 2A2E          __smallconst 1004             intlevel0 0000  
            intlevel1 0000             intlevel2 0000             intlevel3 0000             reset_vec 1000  
